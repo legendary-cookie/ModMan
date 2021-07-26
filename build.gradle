@@ -1,0 +1,24 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
+    id "com.github.johnrengelman.shadow" version "7.0.0"
+}
+
+group 'io.github.cosmonetworks'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.2")
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'io.github.cosmonetworks.modman.Core'
+        )
+    }
+}
